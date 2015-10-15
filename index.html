@@ -1,0 +1,116 @@
+<!--
+Derivco SliceOfSource Hackathon UP
+August 2015
+
+Project Name: The Cepheid Variables
+Author: David Breetzke
+
+***
+This page is manipulated by webView and renderView
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="author" content="David Breetzke">
+<title>The Cepheid Variables</title>
+<link rel="stylesheet" href="styling.css" type="text/css"/>
+<script src="scripts/gameEngine.js" type="text/javascript"></script>
+<script src="scripts/ai.js" type="text/javascript"></script>
+<script src="scripts/data.js" type="text/javascript"></script>
+<script src="scripts/setup.js" type="text/javascript"></script>
+<script src="scripts/start.js" type="text/javascript"></script>
+<script src="scripts/renderView.js" type="text/javascript"></script>
+<script src="scripts/webView.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="setupDiv">
+    <img src="media/banner.jpg" alt="The Cepheid Variables" height="59" width="900" id="title">
+
+	<form id="mainForm" >
+<table id="gameSettingsTable">
+	<th colspan="2">Game Settings</th>
+	<tr>
+		<td>Grid Size: </td>
+		<td><input type="text" id="gridSize" value="14" pattern="^[0-9]+[02468]$" autofocus="autofocus" required title="Even numbers greater than 8 and less than 20"></td>
+	</tr>
+	<tr>
+		<td>Aliens Each: </td>
+		<td><input type="text" id="cellsEach" pattern="^[12345678]$" required title="1 to 8" value="4"></td>
+	</tr>
+</table>
+<br>
+<table id="gameModesTable">
+	<th>Game Modes</th>
+	<tr>
+		<td><input type="radio" name="gameOption" id="gameOption1" required checked>Two Player Game</td>
+	<tr>
+	</tr>
+		<td><input type="radio" name="gameOption" id="gameOption2">Player Vs RandomMover</td>
+	<tr>
+</table>
+<table><tr><td>
+	<input type="button" id="playButton" onclick="setUpGame()" value="Play Now!">
+</td></tr>
+	</table>
+		<table>
+	<tr><td>
+		<input type="button" id="helpButton" onclick="toggleHelp()" value="Help and About">
+	</td></tr>
+</table>
+	</form>
+	<div id="helpDiv" hidden>
+		THE NAME<br/>
+		Why "The Cepheid Variables" ?<br/>
+		The "Cepheid Variables" are some important stars which were discovered by South
+		African astronomers.<br/>
+		This is inline with the space theme as well as the more obvious connection to coding
+		with "variables"<br/><br/>
+
+
+		THE CODE<br/>
+		This game uses the abstract factory design pattern for calling the random move pc
+		player.<br/>
+		This supports the future possibility of AI implementations (different diffculty
+		levels) such as a min-max algorithm with different ply-depths.<br/>
+		The code is organised into a logical model-view-controller.<br/>
+		The project can easily be packed to run on Windows, Android and iOS.<br/><br/>
+
+
+		THE GAME<br/>
+		The object of the game is to capture all your opponent's aliens
+		Each alien has an aura surrounding it.<br/>
+		You can capture another alien by getting your aura to touch the side of another alien.<br/>
+		When aliens of the same team have their auras touching, the collective aura will extend to be
+		a large rectangle enclosing the individual auras.<br/>
+		Aliens can move either vertically or horizontally. The maximum distance any alien may move is
+		equal to the amount of aliens enclosed in its aura.<br/>
+		Make a move by clicking on one of your aliens and then clicking on a valid new cell on the board.<br/><br/>
+
+		PLAYER VS PC (RANDOM MOVER)<br/>
+		Player makes a move as detailed above. Click anywhere on the board to make the PC play. The PC's old position is marked by a green dot and the alien which was last moved by the PC appears to be selected (it has green eyes and mouth).<br/><br/>
+		
+		LICENSING INFO<br/>
+		BACKGROUND<br/>
+		Supplied by Derivco<br/><br/>
+
+		FONT<br/>
+		Free for personal use only.<br/>
+		Title image font: Space Age, downloaded from this <a href="http://www.fontspace.com/qbotype/oxin-war">fontspace page</a><br/>
+		Subject to the license agreement from this <a href ="http://mickeyavenue.com/fonts/spaceage/license.php">mickeyavenue page</a><br/><br/>
+
+		ICONS<br/>
+		Licensed under Creative Commons<br/>
+		<a href="http://www.icon100.com/icon/188400/alien-space-character">Alien icon from icon100</a><br/>
+		<a href="http://www.icon100.com/icon/205142/alien">Alien icon 2 from icon100</a><br/>
+		<input type="button" id="helpButtonBottom" onclick="toggleHelp()" value="Back to Game">
+	</div>
+	<div id="responseDiv" hidden><br/><br/></div>
+	<div id="canvasPlacer"></div><br/>
+</div>
+<div id="debugDiv">
+</div>
+
+</body>
+
+</html>

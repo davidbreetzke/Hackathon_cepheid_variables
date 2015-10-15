@@ -1,0 +1,95 @@
+/*
+Derivco SliceOfSource Hackathon UP
+August 2015
+
+Project Name: The Cepheid Variables
+Author: David Breetzke
+
+***
+Styling settings
+*/
+
+body
+{
+background-image:url('media/starBackground.png');
+background-color:#008080;
+}
+
+th{
+    font-size: 24px;
+}
+td,input{
+    font-size: 20px;
+}
+
+#setupDiv{
+	padding-left: 10px ;
+    padding-right: 10px ;
+	padding-top: 1% ;
+	padding-bottom: 3% ;
+	width: 1000px ;
+	margin-left: auto ;
+	margin-right: auto ;
+    background-image:url('media/starBackground.png');
+}
+#helpDiv{
+    width: 1000px ;
+    background-color: rgba(158,158,158,0.5) ;
+    border-radius: 15px ;
+    padding-left: 10px ;
+    padding-right: 10px ;
+    padding-top: 1% ;
+    padding-bottom: 3% ;
+    font-size: larger;
+	margin-left: auto ;
+	margin-right: auto ;
+}
+#responseDiv{
+    background-color: rgba(158,158,158,0.2) ;
+    text-align: center;
+    margin-left: auto ;
+    margin-right: auto ;
+    font-family: stylistic ;
+    font-size: 22px;
+    color: chartreuse;
+    border-radius: 15px ;
+}
+#mainForm{
+    background-color: rgba(158,158,158,0.3) ;
+    border-radius: 15px ;
+}
+#titleDiv{
+    width: 980px ;
+    margin-left: auto ;
+    margin-right: auto ;
+    background-color: rgba(158,158,158,1) ;
+    border-radius: 15px ;
+}
+
+#blockheading {
+	font-family: papyrus ; 
+	font-size: 35pt ; 
+	text-decoration: underline ; 
+	text-align: center ;
+}
+#title {
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+#theGameCanvas {
+	display : block;
+   margin : auto;
+    background-color: rgba(158,158,158,0.3) ;
+
+}
+
+input[type="text"]{
+	width: 50px
+}
+
+table
+{
+	margin-left:auto; 
+    margin-right:auto;
+}

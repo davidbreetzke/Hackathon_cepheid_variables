@@ -1,3 +1,9 @@
+## The Task
+	Create a game using HTML5 and JavaScript. The hackathon is outer-space themed.
+	You have 18 hours. Goodluck.
+	Derivco Slice of Source Hackathon 2015 University of Pretoria
+
+
 ## The Name
 	Why "The Cepheid Variables" ?
 	The "Cepheid Variables" are some important stars which were discovered by 
